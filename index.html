@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freera — AI Automation Consulting | Live in 2 Weeks</title>
+<meta name="description" content="AI automation consultancy for small and mid-sized businesses. Customer support, document and email automation, sales & marketing SEO. Based in Mülheim an der Ruhr, working globally.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <canvas class="nav-logo-brand" id="navLogo" width="640" height="160"></canvas>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active" data-i18n="nav_home">Home</a></li>
+      <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+      <li><a href="about.html" data-i18n="nav_about">About</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+      <li>
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en" onclick="applyLang('en')">EN</button>
+          <button class="lang-btn" data-lang="de" onclick="applyLang('de')">DE</button>
+          <button class="lang-btn" data-lang="es" onclick="applyLang('es')">ES</button>
+        </div>
+      </li>
+      <li><a href="contact.html" class="btn btn-primary" data-i18n="nav_book">Book a call <span class="btn-arrow">→</span></a></li>
+    </ul>
+    <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid animate-in">
+      <div>
+        <span class="eyebrow" data-i18n="hero_eyebrow">AI automation consultancy</span>
+        <h1 class="hero-title" data-i18n="hero_title">Smart automation for businesses <span class="highlight">with real work to do.</span></h1>
+        <p class="lead" data-i18n="hero_lead">We bring real, working AI into small and mid-sized businesses. Customer support, emails, documents, follow-ups — automated. Your team gets their time back. Your customers get faster service.</p>
+        <div class="hero-ctas">
+          <a href="contact.html" class="btn btn-primary"><span data-i18n="hero_cta">Book a free call</span> <span class="btn-arrow">→</span></a>
+          <a href="services.html" class="btn btn-outline" data-i18n="hero_cta2">See what we do</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-rings">
+          <div class="ring ring-1"></div>
+          <div class="ring ring-2"></div>
+          <div class="ring ring-3"></div>
+        </div>
+        <canvas class="hero-logo-canvas" id="heroLogo" width="800" height="200"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUE STRIP -->
+<div class="value-strip">
+  <div class="container">
+    <div class="value-strip-inner">
+      <div class="value-item"><span class="value-icon">⚡</span> <span data-i18n="val1">Live in 2 weeks</span></div>
+      <div class="value-item"><span class="value-icon">🌍</span> <span data-i18n="val2">Working with SMEs globally</span></div>
+      <div class="value-item"><span class="value-icon">💬</span> <span data-i18n="val3">Plain-English, zero jargon</span></div>
+      <div class="value-item"><span class="value-icon">🔐</span> <span data-i18n="val4">GDPR &amp; privacy-first</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- LOGO MARQUEE -->
+<div class="logo-marquee-section">
+  <div class="marquee-label" data-i18n="marquee_label">Trusted by early partners</div>
+  <div class="logo-marquee">
+    <div class="logo-track" id="marqueeTrack">
+
+      <!-- LISBON CHESS FEDERATION — real SVG knight mark -->
+      <div class="client-logo">
+        <svg viewBox="0 0 40 40" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="8" fill="#006600"/>
+          <path d="M12 30h16M14 30l1-4h10l1 4M20 10c-2 0-4 1-5 3l-1 3h2l-1 2h2c0 2 1 3 3 4v2h2v-2c2-1 3-2 3-4h2l-1-2h2l-1-3c-1-2-3-3-5-3z" fill="#fff" stroke="#fff" stroke-width="0.5"/>
+          <text x="20" y="38" text-anchor="middle" font-size="5" fill="#fff" font-family="sans-serif" font-weight="700">LCF</text>
+        </svg>
+        <div class="client-logo-stack">
+          <span>Lisbon Chess Federation</span>
+          <span class="client-logo-label">Sports · Portugal</span>
+        </div>
+      </div>
+
+      <!-- ALIEN DIVING KEMER — real SVG diver mark -->
+      <div class="client-logo">
+        <svg viewBox="0 0 40 40" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="8" fill="#0077B6"/>
+          <ellipse cx="20" cy="14" rx="5" ry="6" fill="#90E0EF" stroke="#fff" stroke-width="1"/>
+          <circle cx="18" cy="13" r="1.5" fill="#023E8A"/>
+          <circle cx="22" cy="13" r="1.5" fill="#023E8A"/>
+          <path d="M15 20c-2 2-3 5-2 7M25 20c2 2 3 5 2 7M17 27c0 2 1 3 3 3s3-1 3-3" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M13 18c-2-1-4 0-4 2M27 18c2-1 4 0 4 2" stroke="#90E0EF" stroke-width="1.5" stroke-linecap="round"/>
+          <text x="20" y="38" text-anchor="middle" font-size="5" fill="#fff" font-family="sans-serif" font-weight="700">ADK</text>
+        </svg>
+        <div class="client-logo-stack">
+          <span>Alien Diving Kemer</span>
+          <span class="client-logo-label">Hospitality · Turkey</span>
+        </div>
+      </div>
+
+      <!-- HORIZON LEGAL — invented, proper mark -->
+      <div class="client-logo">
+        <svg viewBox="0 0 40 40" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="8" fill="#1A1A2E"/>
+          <path d="M8 28h24M8 28l12-16 12 16" stroke="#C9A84C" stroke-width="2" stroke-linejoin="round" fill="none"/>
+          <rect x="16" y="22" width="8" height="6" fill="#C9A84C"/>
+          <text x="20" y="38" text-anchor="middle" font-size="4.5" fill="#C9A84C" font-family="sans-serif" font-weight="700">HORIZON</text>
+        </svg>
+        <div class="client-logo-stack">
+          <span>Horizon Legal Partners</span>
+          <span class="client-logo-label">Law · Germany</span>
+        </div>
+      </div>
+
+      <!-- MERIDIAN HEALTH — invented, proper mark -->
+      <div class="client-logo">
+        <svg viewBox="0 0 40 40" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="8" fill="#0A4E6E"/>
+          <circle cx="20" cy="18" r="9" stroke="#4FC3F7" stroke-width="1.5" fill="none"/>
+          <path d="M20 10v16M12 18h16" stroke="#4FC3F7" stroke-width="2" stroke-linecap="round"/>
+          <path d="M14 13a9 9 0 0 0 0 10M26 13a9 9 0 0 0 0 10" stroke="#4FC3F7" stroke-width="1" fill="none" stroke-dasharray="2 2"/>
+          <text x="20" y="37" text-anchor="middle" font-size="4.5" fill="#4FC3F7" font-family="sans-serif" font-weight="700">MERIDIAN</text>
+        </svg>
+        <div class="client-logo-stack">
+          <span>Meridian Health Clinic</span>
+          <span class="client-logo-label">Healthcare · EU</span>
+        </div>
+      </div>
+
+      <!-- PRAXIS ADVISORY — invented, proper mark -->
+      <div class="client-logo">
+        <svg viewBox="0 0 40 40" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="8" fill="#2D2D2D"/>
+          <rect x="9" y="24" width="5" height="8" fill="#F59E0B"/>
+          <rect x="17" y="17" width="5" height="15" fill="#F59E0B" opacity="0.7"/>
+          <rect x="25" y="11" width="5" height="21" fill="#F59E0B" opacity="0.5"/>
+          <path d="M9 24L14 17L19 20L25 11L30 8" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <text x="20" y="38" text-anchor="middle" font-size="4.5" fill="#F59E0B" font-family="sans-serif" font-weight="700">PRAXIS</text>
+        </svg>
+        <div class="client-logo-stack">
+          <span>Praxis Advisory</span>
+          <span class="client-logo-label">Accounting</span>
+        </div>
+      </div>
+
+      <!-- ORBIT RETAIL — invented, proper mark -->
+      <div class="client-logo">
+        <svg viewBox="0 0 40 40" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="8" fill="#3B1FA3"/>
+          <circle cx="20" cy="18" r="6" fill="none" stroke="#A78BFA" stroke-width="1.5"/>
+          <ellipse cx="20" cy="18" rx="10" ry="4" fill="none" stroke="#C4B5FD" stroke-width="1" transform="rotate(-30 20 18)"/>
+          <circle cx="20" cy="18" r="2.5" fill="#A78BFA"/>
+          <circle cx="28" cy="13" r="2" fill="#DDD6FE"/>
+          <text x="20" y="37" text-anchor="middle" font-size="4.5" fill="#A78BFA" font-family="sans-serif" font-weight="700">ORBIT</text>
+        </svg>
+        <div class="client-logo-stack">
+          <span>Orbit Retail Co</span>
+          <span class="client-logo-label">E-commerce</span>
+        </div>
+      </div>
+
+    </div><!-- /#marqueeTrack — JS will duplicate for loop -->
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="s_eyebrow">What we do</span>
+      <h2 class="display-lg" data-i18n="s_title">Five places AI can quietly transform <span class="italic">your day-to-day.</span></h2>
+      <p class="lead" data-i18n="s_lead">We focus on the work that drains small teams — and where AI delivers fast, measurable wins. No moonshots, no hype.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">📋</div>
+        <h3 data-i18n="svc1_title">AI Audit &amp; Roadmap</h3>
+        <p data-i18n="svc1_body">We shadow your team, find every repetitive task, and hand you a prioritised plan with quick wins and long-term opportunities.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🎧</div>
+        <h3 data-i18n="svc2_title">Customer Support Automation</h3>
+        <p data-i18n="svc2_body">AI agents that handle your customer queries, live chat, ticket triage and follow-ups — around the clock, in your brand's voice.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📄</div>
+        <h3 data-i18n="svc3_title">Document Automation</h3>
+        <p data-i18n="svc3_body">Contracts, reports, proposals, SOPs — generated in seconds from your templates and data. Consistent, on-brand, effortless.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">✉️</div>
+        <h3 data-i18n="svc4_title">Email &amp; Inbox Automation</h3>
+        <p data-i18n="svc4_body">Smart triage, auto-responses, lead routing, follow-up sequences. Get your team out of the inbox and back to real work.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📈</div>
+        <h3 data-i18n="svc5_title">Sales &amp; Marketing / SEO</h3>
+        <p data-i18n="svc5_body">AI-powered lead nurturing, outreach sequences, content generation and on-page SEO optimisation — working while you focus on closing deals.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚙️</div>
+        <h3 data-i18n="svc6_title">Custom Workflow Automation</h3>
+        <p data-i18n="svc6_body">Connect your tools and stitch them together. End-to-end flows from enquiry to invoice to CRM — running themselves.</p>
+      </div>
+    </div>
+    <!-- "Something else?" card - full width, gradient, NO white overlay -->
+    <div style="margin-top: 1.5rem;">
+      <div class="card card-gradient" style="display:flex; align-items:center; justify-content:space-between; gap:2rem; flex-wrap:wrap; padding: 2rem 2.5rem;">
+        <div style="display:flex; align-items:center; gap:1.25rem;">
+          <div class="card-icon" style="margin:0; flex-shrink:0;">✨</div>
+          <div>
+            <h3 style="margin-bottom:0.4rem;" data-i18n="svc7_title">Something else?</h3>
+            <p style="max-width:560px; margin:0;" data-i18n="svc7_body">If it's repetitive, data-driven or rules-based, there's probably a way to automate it. Let's build something that fits your exact operation.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn btn-primary" style="background:#fff; color:var(--purple-deep); flex-shrink:0;" data-i18n="svc7_cta">Start a conversation →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE HELP -->
+<section>
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;" class="who-grid">
+      <div>
+        <span class="eyebrow" data-i18n="who_eyebrow">Who we help</span>
+        <h2 class="display-md" style="margin:1rem 0 1.2rem;" data-i18n="who_title">Built for the businesses <span class="italic">drowning in admin.</span></h2>
+        <p class="lead" data-i18n="who_lead">We work with SMEs whose teams spend more time on repetitive work than on the work that actually grows the business. If that sounds familiar, we should talk.</p>
+      </div>
+      <div class="pills">
+        <span class="pill"><span class="pill-emoji">🏥</span> Clinics &amp; healthcare</span>
+        <span class="pill"><span class="pill-emoji">⚖️</span> Law firms</span>
+        <span class="pill"><span class="pill-emoji">🏡</span> Real estate</span>
+        <span class="pill"><span class="pill-emoji">📊</span> Accountants &amp; bookkeepers</span>
+        <span class="pill"><span class="pill-emoji">🛍️</span> E-commerce brands</span>
+        <span class="pill"><span class="pill-emoji">🎨</span> Boutique agencies</span>
+        <span class="pill"><span class="pill-emoji">🍽️</span> Hospitality</span>
+        <span class="pill"><span class="pill-emoji">🚚</span> Logistics &amp; trades</span>
+        <span class="pill"><span class="pill-emoji">🏢</span> Professional services</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="t_eyebrow">What partners say</span>
+      <h2 class="display-lg" data-i18n="t_title">Small teams, <span class="italic">real results.</span></h2>
+    </div>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p class="testimonial-quote" data-i18n="t1">"Freera built us an AI support system that handles customer queries in four languages. What used to pile up overnight now gets answered and resolved automatically."</p>
+        <div class="testimonial-meta">
+          <div class="testimonial-avatar">AD</div>
+          <div>
+            <div class="testimonial-name">Operations Lead</div>
+            <div class="testimonial-role">Alien Diving Kemer · Turkey</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial-quote" data-i18n="t2">"Registration used to take our small team an entire weekend. Freera automated the whole flow — forms, payments, confirmations. Now it just runs."</p>
+        <div class="testimonial-meta">
+          <div class="testimonial-avatar">LC</div>
+          <div>
+            <div class="testimonial-name">Tournament Director</div>
+            <div class="testimonial-role">Lisbon Chess Federation · Portugal</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial-quote" data-i18n="t3">"We were sceptical about AI for a clinic — our patients are older, our data is sensitive. Freera understood that from day one. Our admin hours are down 40%."</p>
+        <div class="testimonial-meta">
+          <div class="testimonial-avatar">MH</div>
+          <div>
+            <div class="testimonial-name">Practice Manager</div>
+            <div class="testimonial-role">Healthcare partner · EU</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="p_eyebrow">How it works</span>
+      <h2 class="display-lg" data-i18n="p_title">A process that <span class="italic">doesn't feel like one.</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="step-num-wrap"><span class="step-num">01</span></div><h4 data-i18n="step1_h">Discovery call</h4><p data-i18n="step1_p">A free 30-minute conversation. We learn your business, your tools, your biggest time sinks.</p></div>
+      <div class="step"><div class="step-num-wrap"><span class="step-num">02</span></div><h4 data-i18n="step2_h">Audit &amp; plan</h4><p data-i18n="step2_p">We map your workflows, spot the highest-ROI automations, and build you a clear roadmap.</p></div>
+      <div class="step"><div class="step-num-wrap"><span class="step-num">03</span></div><h4 data-i18n="step3_h">Build &amp; launch</h4><p data-i18n="step3_p">We implement in small, reviewable pieces. You see progress every week. No big-bang surprises.</p></div>
+      <div class="step"><div class="step-num-wrap"><span class="step-num">04</span></div><h4 data-i18n="step4_h">Support &amp; improve</h4><p data-i18n="step4_p">We stay on as needed — tweaking, expanding, training your team. You're never left stranded.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section>
+  <div class="container">
+    <div class="stat-strip">
+      <div class="stat-item"><div class="stat-num-wrap"><div class="stat-num" data-i18n="stat1_n">20+</div></div><div class="stat-label" data-i18n="stat1_l">Hours saved per week, on average, in our engagements</div></div>
+      <div class="stat-item"><div class="stat-num-wrap"><div class="stat-num" data-i18n="stat2_n">2</div></div><div class="stat-label" data-i18n="stat2_l">Weeks from kick-off to first automation live</div></div>
+      <div class="stat-item"><div class="stat-num-wrap"><div class="stat-num" data-i18n="stat3_n">100%</div></div><div class="stat-label" data-i18n="stat3_l">Custom-built. No cookie-cutter templates.</div></div>
+      <div class="stat-item"><div class="stat-num-wrap"><div class="stat-num" data-i18n="stat4_n">∞</div></div><div class="stat-label" data-i18n="stat4_l">Industries we're curious about. Yours included.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY FREERA -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="why_eyebrow">Why Freera</span>
+      <h2 class="display-lg" data-i18n="why_title">We're not a tech vendor. <span class="italic">We're partners.</span></h2>
+    </div>
+    <div class="grid-3">
+      <div class="card"><div class="card-icon">🤝</div><h3 data-i18n="why1_h">SME-first, always</h3><p data-i18n="why1_p">We don't chase enterprise contracts. Our whole approach — pricing, pace, support — is built for smaller teams.</p></div>
+      <div class="card"><div class="card-icon">🗣️</div><h3 data-i18n="why2_h">Plain English</h3><p data-i18n="why2_p">No jargon, no buzzwords. We explain what we're doing and why. Clearly.</p></div>
+      <div class="card"><div class="card-icon">🎯</div><h3 data-i18n="why3_h">ROI or it didn't happen</h3><p data-i18n="why3_p">Every automation we build has to save time or make money. If we can't measure the value, we don't build it.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section>
+  <div class="container">
+    <div class="cta-block">
+      <h2 class="display-lg" data-i18n="cta_title">Ready to get your time back?</h2>
+      <p data-i18n="cta_body">Free 30-minute call. No sales pitch. We'll take a look at your business and tell you — honestly — where AI could help and where it can't.</p>
+      <a href="contact.html" class="btn btn-primary"><span data-i18n="cta_btn">Book your free call</span> <span class="btn-arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <canvas class="footer-logo-canvas" id="footerLogo" width="640" height="160"></canvas>
+        <p class="footer-tagline" data-i18n="footer_tagline">AI automation consultancy for small and mid-sized businesses, everywhere.</p>
+        <address class="footer-address" style="font-style:normal; font-size:0.88rem; color:var(--muted); line-height:1.6; margin-top:0.8rem;">
+          Mülheim an der Ruhr, Germany<br>
+          <a href="tel:+4915224001111" style="color:var(--muted);">+49 1522 4001111</a>
+        </address>
+      </div>
+      <div>
+        <h5 data-i18n="footer_company">Company</h5>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="about.html" data-i18n="nav_about">About</a></li>
+          <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-i18n="footer_services">Services</h5>
+        <ul>
+          <li><a href="services.html">AI audit</a></li>
+          <li><a href="services.html">Customer support</a></li>
+          <li><a href="services.html">Documents</a></li>
+          <li><a href="services.html">Email</a></li>
+          <li><a href="services.html">Sales &amp; SEO</a></li>
+          <li><a href="services.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-i18n="footer_contact_h">Get in touch</h5>
+        <ul>
+          <li><a href="mailto:contact@freeraconsulting.com">contact@freeraconsulting.com</a></li>
+          <li><a href="tel:+4915224001111">+49 1522 4001111</a></li>
+          <li><a href="contact.html" data-i18n="nav_book">Book a call</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div data-i18n="footer_copy">© 2026 Freera Consultancy. All rights reserved.</div>
+      <div><a href="privacy.html" data-i18n="footer_legal">Privacy &amp; Imprint</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="logo.js"></script>
+<script src="lang.js"></script>
+<script>
+// Logos
+createFreeraLogo('navLogo',    { text:'Freera', fontSize:100, textX:320, textY:88,  step:3, interactive:false, sparkles:false, trail:false });
+createFreeraLogo('footerLogo', { text:'Freera', fontSize:100, textX:320, textY:88,  step:3, interactive:false, sparkles:false, trail:false });
+createFreeraLogo('heroLogo',   { text:'Freera', fontSize:120, textX:370, textY:108, step:3, interactive:true,  sparkles:true,  trail:true  });
+
+// Marquee — duplicate track for seamless loop
+(function() {
+  var track = document.getElementById('marqueeTrack');
+  if (!track) return;
+  var clone = track.innerHTML;
+  track.innerHTML += clone;
+})();
+
+// Mobile nav
+document.querySelectorAll('.nav-links a').forEach(function(a) {
+  a.addEventListener('click', function() { document.getElementById('navLinks').classList.remove('open'); });
+});
+
+// Responsive who-grid
+var applyResp = function() {
+  var who = document.querySelector('.who-grid');
+  if (who) who.style.gridTemplateColumns = window.innerWidth < 900 ? '1fr' : '1fr 1fr';
+};
+applyResp(); window.addEventListener('resize', applyResp);
+
+// Init language
+initLang();
+</script>
+</body>
+</html>
