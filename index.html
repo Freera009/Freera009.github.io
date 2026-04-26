@@ -9,6 +9,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="shortcut icon" href="favicon.svg">
 </head>
 <body>
 
@@ -23,11 +26,8 @@
       <li><a href="about.html" data-i18n="nav_about">About</a></li>
       <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
       <li>
-        <div class="lang-switcher">
-          <button class="lang-btn active" data-lang="en" onclick="applyLang('en')">EN</button>
-          <button class="lang-btn" data-lang="de" onclick="applyLang('de')">DE</button>
-          <button class="lang-btn" data-lang="es" onclick="applyLang('es')">ES</button>
-        </div>
+        <!-- Dropdown built automatically by lang.js — leave this div empty -->
+        <div class="lang-switcher"></div>
       </li>
       <li><a href="contact.html" class="btn btn-primary" data-i18n="nav_book">Book a call <span class="btn-arrow">→</span></a></li>
     </ul>
@@ -77,8 +77,6 @@
   <div class="marquee-label" data-i18n="marquee_label">Trusted by early partners</div>
   <div class="logo-marquee">
     <div class="logo-track" id="marqueeTrack">
-
-      <!-- LISBON CHESS FEDERATION — real SVG knight mark -->
       <div class="client-logo">
         <svg viewBox="0 0 40 40" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="40" height="40" rx="8" fill="#006600"/>
@@ -90,8 +88,6 @@
           <span class="client-logo-label">Sports · Portugal</span>
         </div>
       </div>
-
-      <!-- ALIEN DIVING KEMER — real SVG diver mark -->
       <div class="client-logo">
         <svg viewBox="0 0 40 40" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="40" height="40" rx="8" fill="#0077B6"/>
@@ -107,8 +103,6 @@
           <span class="client-logo-label">Hospitality · Turkey</span>
         </div>
       </div>
-
-      <!-- HORIZON LEGAL — invented, proper mark -->
       <div class="client-logo">
         <svg viewBox="0 0 40 40" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="40" height="40" rx="8" fill="#1A1A2E"/>
@@ -121,8 +115,6 @@
           <span class="client-logo-label">Law · Germany</span>
         </div>
       </div>
-
-      <!-- MERIDIAN HEALTH — invented, proper mark -->
       <div class="client-logo">
         <svg viewBox="0 0 40 40" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="40" height="40" rx="8" fill="#0A4E6E"/>
@@ -136,8 +128,6 @@
           <span class="client-logo-label">Healthcare · EU</span>
         </div>
       </div>
-
-      <!-- PRAXIS ADVISORY — invented, proper mark -->
       <div class="client-logo">
         <svg viewBox="0 0 40 40" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="40" height="40" rx="8" fill="#2D2D2D"/>
@@ -152,8 +142,6 @@
           <span class="client-logo-label">Accounting</span>
         </div>
       </div>
-
-      <!-- ORBIT RETAIL — invented, proper mark -->
       <div class="client-logo">
         <svg viewBox="0 0 40 40" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="40" height="40" rx="8" fill="#3B1FA3"/>
@@ -168,8 +156,7 @@
           <span class="client-logo-label">E-commerce</span>
         </div>
       </div>
-
-    </div><!-- /#marqueeTrack — JS will duplicate for loop -->
+    </div>
   </div>
 </div>
 
@@ -182,38 +169,13 @@
       <p class="lead" data-i18n="s_lead">We focus on the work that drains small teams — and where AI delivers fast, measurable wins. No moonshots, no hype.</p>
     </div>
     <div class="grid-3">
-      <div class="card">
-        <div class="card-icon">📋</div>
-        <h3 data-i18n="svc1_title">AI Audit &amp; Roadmap</h3>
-        <p data-i18n="svc1_body">We shadow your team, find every repetitive task, and hand you a prioritised plan with quick wins and long-term opportunities.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">🎧</div>
-        <h3 data-i18n="svc2_title">Customer Support Automation</h3>
-        <p data-i18n="svc2_body">AI agents that handle your customer queries, live chat, ticket triage and follow-ups — around the clock, in your brand's voice.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">📄</div>
-        <h3 data-i18n="svc3_title">Document Automation</h3>
-        <p data-i18n="svc3_body">Contracts, reports, proposals, SOPs — generated in seconds from your templates and data. Consistent, on-brand, effortless.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">✉️</div>
-        <h3 data-i18n="svc4_title">Email &amp; Inbox Automation</h3>
-        <p data-i18n="svc4_body">Smart triage, auto-responses, lead routing, follow-up sequences. Get your team out of the inbox and back to real work.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">📈</div>
-        <h3 data-i18n="svc5_title">Sales &amp; Marketing / SEO</h3>
-        <p data-i18n="svc5_body">AI-powered lead nurturing, outreach sequences, content generation and on-page SEO optimisation — working while you focus on closing deals.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">⚙️</div>
-        <h3 data-i18n="svc6_title">Custom Workflow Automation</h3>
-        <p data-i18n="svc6_body">Connect your tools and stitch them together. End-to-end flows from enquiry to invoice to CRM — running themselves.</p>
-      </div>
+      <div class="card"><div class="card-icon">📋</div><h3 data-i18n="svc1_title">AI Audit &amp; Roadmap</h3><p data-i18n="svc1_body">We shadow your team, find every repetitive task, and hand you a prioritised plan with quick wins and long-term opportunities.</p></div>
+      <div class="card"><div class="card-icon">🎧</div><h3 data-i18n="svc2_title">Customer Support Automation</h3><p data-i18n="svc2_body">AI agents that handle your customer queries, live chat, ticket triage and follow-ups — around the clock, in your brand's voice.</p></div>
+      <div class="card"><div class="card-icon">📄</div><h3 data-i18n="svc3_title">Document Automation</h3><p data-i18n="svc3_body">Contracts, reports, proposals, SOPs — generated in seconds from your templates and data. Consistent, on-brand, effortless.</p></div>
+      <div class="card"><div class="card-icon">✉️</div><h3 data-i18n="svc4_title">Email &amp; Inbox Automation</h3><p data-i18n="svc4_body">Smart triage, auto-responses, lead routing, follow-up sequences. Get your team out of the inbox and back to real work.</p></div>
+      <div class="card"><div class="card-icon">📈</div><h3 data-i18n="svc5_title">Sales &amp; Marketing / SEO</h3><p data-i18n="svc5_body">AI-powered lead nurturing, outreach sequences, content generation and on-page SEO optimisation — working while you focus on closing deals.</p></div>
+      <div class="card"><div class="card-icon">⚙️</div><h3 data-i18n="svc6_title">Custom Workflow Automation</h3><p data-i18n="svc6_body">Connect your tools and stitch them together. End-to-end flows from enquiry to invoice to CRM — running themselves.</p></div>
     </div>
-    <!-- "Something else?" card - full width, gradient, NO white overlay -->
     <div style="margin-top: 1.5rem;">
       <div class="card card-gradient" style="display:flex; align-items:center; justify-content:space-between; gap:2rem; flex-wrap:wrap; padding: 2rem 2.5rem;">
         <div style="display:flex; align-items:center; gap:1.25rem;">
@@ -265,30 +227,21 @@
         <p class="testimonial-quote" data-i18n="t1">"Freera built us an AI support system that handles customer queries in four languages. What used to pile up overnight now gets answered and resolved automatically."</p>
         <div class="testimonial-meta">
           <div class="testimonial-avatar">AD</div>
-          <div>
-            <div class="testimonial-name">Operations Lead</div>
-            <div class="testimonial-role">Alien Diving Kemer · Turkey</div>
-          </div>
+          <div><div class="testimonial-name">Operations Lead</div><div class="testimonial-role">Alien Diving Kemer · Turkey</div></div>
         </div>
       </div>
       <div class="testimonial">
         <p class="testimonial-quote" data-i18n="t2">"Registration used to take our small team an entire weekend. Freera automated the whole flow — forms, payments, confirmations. Now it just runs."</p>
         <div class="testimonial-meta">
           <div class="testimonial-avatar">LC</div>
-          <div>
-            <div class="testimonial-name">Tournament Director</div>
-            <div class="testimonial-role">Lisbon Chess Federation · Portugal</div>
-          </div>
+          <div><div class="testimonial-name">Tournament Director</div><div class="testimonial-role">Lisbon Chess Federation · Portugal</div></div>
         </div>
       </div>
       <div class="testimonial">
         <p class="testimonial-quote" data-i18n="t3">"We were sceptical about AI for a clinic — our patients are older, our data is sensitive. Freera understood that from day one. Our admin hours are down 40%."</p>
         <div class="testimonial-meta">
           <div class="testimonial-avatar">MH</div>
-          <div>
-            <div class="testimonial-name">Practice Manager</div>
-            <div class="testimonial-role">Healthcare partner · EU</div>
-          </div>
+          <div><div class="testimonial-name">Practice Manager</div><div class="testimonial-role">Healthcare partner · EU</div></div>
         </div>
       </div>
     </div>
@@ -353,17 +306,17 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
+
+      <!-- Col 1: Logo + tagline + address (NO phone/WA here anymore) -->
       <div>
         <canvas class="footer-logo-canvas" id="footerLogo" width="640" height="160"></canvas>
         <p class="footer-tagline" data-i18n="footer_tagline">AI automation consultancy for small and mid-sized businesses, everywhere.</p>
-        <address class="footer-address" style="font-style:normal; font-size:0.88rem; color:var(--muted); line-height:1.6; margin-top:0.8rem;">
-          Mülheim an der Ruhr, Germany<br>
-          <span style="display:inline-flex; align-items:center; gap:0.5rem;">
-            <a href="tel:+4915224001111" style="color:var(--muted);">+49 1522 4001111</a>
-            <a href="https://wa.me/4915224001111" target="_blank" rel="noopener" title="WhatsApp" style="display:inline-flex; color:#25D366;"><svg width="15" height="15" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.118 1.531 5.845L.057 23.516a.75.75 0 0 0 .927.927l5.671-1.474A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.9 0-3.678-.513-5.207-1.408l-.372-.22-3.867 1.005 1.025-3.755-.242-.386A9.955 9.955 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></a>
-          </span>
+        <address style="font-style:normal; font-size:0.88rem; color:var(--muted); line-height:1.6; margin-top:0.8rem;">
+          Mülheim an der Ruhr, Germany
         </address>
       </div>
+
+      <!-- Col 2: Company -->
       <div>
         <h5 data-i18n="footer_company">Company</h5>
         <ul>
@@ -373,6 +326,8 @@
           <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
         </ul>
       </div>
+
+      <!-- Col 3: Services -->
       <div>
         <h5 data-i18n="footer_services">Services</h5>
         <ul>
@@ -384,14 +339,58 @@
           <li><a href="services.html">Workflows</a></li>
         </ul>
       </div>
+
+      <!-- Col 4: Get in touch — styled contact buttons -->
       <div>
         <h5 data-i18n="footer_contact_h">Get in touch</h5>
-        <ul>
-          <li><a href="mailto:contact@freeraconsulting.com">contact@freeraconsulting.com</a></li>
-          <li><a href="tel:+4915224001111">+49 1522 4001111</a></li>
-          <li><a href="contact.html" data-i18n="nav_book">Book a call</a></li>
-        </ul>
+        <div class="footer-contact-links">
+
+          <!-- Email -->
+          <a href="mailto:contact@freeraconsulting.com" class="footer-contact-btn footer-contact-btn--email">
+            <span class="footer-contact-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="3"/>
+                <path d="M2 7l10 7 10-7"/>
+              </svg>
+            </span>
+            <span class="footer-contact-text">
+              <span class="footer-contact-label">Email</span>
+              <span class="footer-contact-value">contact@freeraconsulting.com</span>
+            </span>
+          </a>
+
+          <!-- WhatsApp -->
+          <a href="https://wa.me/4915224001111" target="_blank" rel="noopener" class="footer-contact-btn footer-contact-btn--whatsapp">
+            <span class="footer-contact-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.118 1.531 5.845L.057 23.516a.75.75 0 0 0 .927.927l5.671-1.474A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.9 0-3.678-.513-5.207-1.408l-.372-.22-3.867 1.005 1.025-3.755-.242-.386A9.955 9.955 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+              </svg>
+            </span>
+            <span class="footer-contact-text">
+              <span class="footer-contact-label">WhatsApp</span>
+              <span class="footer-contact-value">+49 1522 4001111</span>
+            </span>
+          </a>
+
+          <!-- Book a call -->
+          <a href="contact.html" class="footer-contact-btn footer-contact-btn--call">
+            <span class="footer-contact-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <path d="M16 2v4M8 2v4M3 10h18"/>
+                <circle cx="12" cy="16" r="1.5" fill="currentColor"/>
+              </svg>
+            </span>
+            <span class="footer-contact-text">
+              <span class="footer-contact-label" data-i18n="nav_book">Book a call</span>
+              <span class="footer-contact-value">Free · 30 min · No pitch</span>
+            </span>
+          </a>
+
+        </div>
       </div>
+
     </div>
     <div class="footer-bottom">
       <div data-i18n="footer_copy">© 2026 Freera Consultancy. All rights reserved.</div>
@@ -400,35 +399,110 @@
   </div>
 </footer>
 
+<!-- Footer contact button styles -->
+<style>
+.footer-contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+.footer-contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  border: 1px solid transparent;
+}
+.footer-contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+.footer-contact-btn--email {
+  background: rgba(100, 80, 200, 0.12);
+  border-color: rgba(100, 80, 200, 0.2);
+  color: #a78bfa;
+}
+.footer-contact-btn--email:hover {
+  background: rgba(100, 80, 200, 0.2);
+  color: #c4b5fd;
+}
+.footer-contact-btn--whatsapp {
+  background: rgba(37, 211, 102, 0.1);
+  border-color: rgba(37, 211, 102, 0.25);
+  color: #25D366;
+}
+.footer-contact-btn--whatsapp:hover {
+  background: rgba(37, 211, 102, 0.2);
+  color: #4ade80;
+}
+.footer-contact-btn--call {
+  background: rgba(180, 140, 255, 0.1);
+  border-color: rgba(180, 140, 255, 0.2);
+  color: #c4b5fd;
+}
+.footer-contact-btn--call:hover {
+  background: rgba(180, 140, 255, 0.18);
+  color: #e9d5ff;
+}
+.footer-contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: rgba(255,255,255,0.07);
+  flex-shrink: 0;
+}
+.footer-contact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+.footer-contact-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+.footer-contact-value {
+  font-size: 12.5px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+</style>
+
 <script src="logo.js"></script>
 <script src="lang.js"></script>
 <script>
-// Logos
 createFreeraLogo('navLogo',    { text:'Freera', fontSize:100, textX:320, textY:88,  step:3, interactive:false, sparkles:false, trail:false });
 createFreeraLogo('footerLogo', { text:'Freera', fontSize:100, textX:320, textY:88,  step:3, interactive:false, sparkles:false, trail:false });
 createFreeraLogo('heroLogo',   { text:'Freera', fontSize:120, textX:370, textY:108, step:3, interactive:true,  sparkles:true,  trail:true  });
 
-// Marquee — duplicate track for seamless loop
 (function() {
   var track = document.getElementById('marqueeTrack');
   if (!track) return;
-  var clone = track.innerHTML;
-  track.innerHTML += clone;
+  track.innerHTML += track.innerHTML;
 })();
 
-// Mobile nav
 document.querySelectorAll('.nav-links a').forEach(function(a) {
   a.addEventListener('click', function() { document.getElementById('navLinks').classList.remove('open'); });
 });
 
-// Responsive who-grid
 var applyResp = function() {
   var who = document.querySelector('.who-grid');
   if (who) who.style.gridTemplateColumns = window.innerWidth < 900 ? '1fr' : '1fr 1fr';
 };
 applyResp(); window.addEventListener('resize', applyResp);
 
-// Init language
 initLang();
 </script>
 </body>
