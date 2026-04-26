@@ -23,11 +23,8 @@
       <li><a href="about.html" data-i18n="nav_about">About</a></li>
       <li><a href="contact.html" class="active" data-i18n="nav_contact">Contact</a></li>
       <li>
-        <div class="lang-switcher">
-          <button class="lang-btn active" data-lang="en" onclick="applyLang('en')">EN</button>
-          <button class="lang-btn" data-lang="de" onclick="applyLang('de')">DE</button>
-          <button class="lang-btn" data-lang="es" onclick="applyLang('es')">ES</button>
-        </div>
+        <!-- Dropdown built automatically by lang.js — leave this div empty -->
+        <div class="lang-switcher"></div>
       </li>
       <li><a href="contact.html" class="btn btn-primary" data-i18n="nav_book">Book a call <span class="btn-arrow">→</span></a></li>
     </ul>
@@ -38,9 +35,9 @@
 <section class="hero" style="padding-bottom:2rem;">
   <div class="container">
     <div style="max-width:820px;" class="animate-in">
-      <span class="eyebrow" data-i18n="nav_contact">Get in touch</span>
-      <h1 class="display-xl" style="margin:1rem 0 1.5rem;">Let's have a <span class="italic">real conversation.</span></h1>
-      <p class="lead" style="max-width:680px;">Book a free 30-minute discovery call, or send us a message. Either way, you'll hear back from a human — usually within a working day.</p>
+      <span class="eyebrow" data-i18n="contact_eyebrow">Get in touch</span>
+      <h1 class="display-xl" style="margin:1rem 0 1.5rem;" data-i18n="contact_title">Let's have a <span class="italic">real conversation.</span></h1>
+      <p class="lead" style="max-width:680px;" data-i18n="contact_lead">Book a free 30-minute discovery call, or send us a message. Either way, you'll hear back from a human — usually within a working day.</p>
     </div>
   </div>
 </section>
@@ -51,84 +48,111 @@
 
       <!-- Booking card -->
       <div class="booking-card">
-        <div style="font-size:0.8rem; font-weight:600; text-transform:uppercase; letter-spacing:0.14em; color:var(--purple-pale); margin-bottom:0.8rem;">Option 1 — fastest</div>
-        <h3>Book a free call</h3>
-        <p>30 minutes. Video or phone. We'll ask about your business, your biggest time-wasters, and where AI could plausibly help. No sales pressure, ever.</p>
+        <div style="font-size:0.8rem; font-weight:600; text-transform:uppercase; letter-spacing:0.14em; color:var(--purple-pale); margin-bottom:0.8rem;" data-i18n="contact_opt1_label">Option 1 — fastest</div>
+        <h3 data-i18n="contact_opt1_h">Book a free call</h3>
+        <p data-i18n="contact_opt1_p">30 minutes. Video or phone. We'll ask about your business, your biggest time-wasters, and where AI could plausibly help. No sales pressure, ever.</p>
         <ul class="booking-list">
-          <li><span class="check">✓</span> 100% free, no obligation</li>
-          <li><span class="check">✓</span> You pick the time that works</li>
-          <li><span class="check">✓</span> Honest take on whether we're a fit</li>
-          <li><span class="check">✓</span> Walk away with at least one useful idea</li>
+          <li><span class="check">✓</span> <span data-i18n="contact_li1">100% free, no obligation</span></li>
+          <li><span class="check">✓</span> <span data-i18n="contact_li2">You pick the time that works</span></li>
+          <li><span class="check">✓</span> <span data-i18n="contact_li3">Honest take on whether we're a fit</span></li>
+          <li><span class="check">✓</span> <span data-i18n="contact_li4">Walk away with at least one useful idea</span></li>
         </ul>
-        <a href="https://cal.com/freera/discovery" class="btn btn-primary" style="width:100%; justify-content:center; padding:1.1rem;">Pick a time that works <span class="btn-arrow">→</span></a>
-        <p style="font-size:0.85rem; opacity:0.7; margin-top:1.2rem; text-align:center;">Prefer email or the form? See below.</p>
+        <a href="https://cal.com/freera/discovery" class="btn btn-primary" style="width:100%; justify-content:center; padding:1.1rem;" data-i18n="contact_cta">Pick a time that works →</a>
+        <p style="font-size:0.85rem; opacity:0.7; margin-top:1.2rem; text-align:center;" data-i18n="contact_or">Prefer email or the form? See below.</p>
       </div>
 
       <!-- Form -->
       <div>
         <div class="form-wrap">
-          <div style="font-size:0.8rem; font-weight:600; text-transform:uppercase; letter-spacing:0.14em; color:var(--purple-deep); margin-bottom:0.8rem;">Option 2</div>
-          <h2 style="font-family:var(--font-display); font-size:1.8rem; margin-bottom:0.6rem;">Send us a message</h2>
-          <p style="color:var(--muted-strong); margin-bottom:2rem;">Tell us a bit about your business and we'll get back to you within one working day.</p>
-          <form action="https://formspree.io/f/xgorlake" method="POST">" 
+          <div style="font-size:0.8rem; font-weight:600; text-transform:uppercase; letter-spacing:0.14em; color:var(--purple-deep); margin-bottom:0.8rem;" data-i18n="contact_opt2_label">Option 2</div>
+          <h2 style="font-family:var(--font-display); font-size:1.8rem; margin-bottom:0.6rem;" data-i18n="contact_opt2_h">Send us a message</h2>
+          <p style="color:var(--muted-strong); margin-bottom:2rem;" data-i18n="contact_opt2_p">Tell us a bit about your business and we'll get back to you within one working day.</p>
+
+          <form action="https://formspree.io/f/xgorlake" method="POST">
+            <input type="hidden" name="_subject" value="New enquiry — Freera website">
+
             <div class="form-row">
-              <div class="form-group"><label for="name">Your name</label><input type="text" id="name" name="name" required></div>
-              <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
+              <div class="form-group">
+                <label for="name" data-i18n="contact_f_name">Your name</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email" data-i18n="contact_f_email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
             </div>
+
             <div class="form-row">
-              <div class="form-group"><label for="company">Company</label><input type="text" id="company" name="company"></div>
-              <div class="form-group"><label for="size">Company size</label>
+              <div class="form-group">
+                <label for="company" data-i18n="contact_f_company">Company</label>
+                <input type="text" id="company" name="company">
+              </div>
+              <div class="form-group">
+                <label for="size" data-i18n="contact_f_size">Company size</label>
                 <select id="size" name="size">
                   <option value="">Choose one...</option>
-                  <option>1–10 people</option><option>11–50 people</option>
-                  <option>51–200 people</option><option>201–500 people</option><option>500+ people</option>
+                  <option data-i18n-opt="size_opt1">1–10 people</option>
+                  <option data-i18n-opt="size_opt2">11–50 people</option>
+                  <option data-i18n-opt="size_opt3">51–200 people</option>
+                  <option data-i18n-opt="size_opt4">201–500 people</option>
+                  <option data-i18n-opt="size_opt5">500+ people</option>
                 </select>
               </div>
             </div>
-            <div class="form-group"><label for="interest">What are you interested in?</label>
+
+            <div class="form-group">
+              <label for="interest" data-i18n="contact_f_interest">What are you interested in?</label>
               <select id="interest" name="interest">
                 <option value="">Choose one...</option>
-                <option>AI audit &amp; roadmap</option>
-                <option>Customer support automation</option>
-                <option>Document automation</option>
-                <option>Email automation</option>
-                <option>Sales &amp; marketing / SEO</option>
-                <option>Custom workflow automation</option>
-                <option>Just exploring — tell me more</option>
+                <option data-i18n-opt="interest_opt1">AI audit &amp; roadmap</option>
+                <option data-i18n-opt="interest_opt2">Customer support automation</option>
+                <option data-i18n-opt="interest_opt3">Document automation</option>
+                <option data-i18n-opt="interest_opt4">Email automation</option>
+                <option data-i18n-opt="interest_opt5">Sales &amp; marketing / SEO</option>
+                <option data-i18n-opt="interest_opt6">Custom workflow automation</option>
+                <option data-i18n-opt="interest_opt7">Just exploring — tell me more</option>
               </select>
             </div>
-            <div class="form-group"><label for="message">Tell us about your business</label>
-              <textarea id="message" name="message" placeholder="What does your business do? What's eating up your team's time? Any specific problems you'd love to solve with AI?" required></textarea>
+
+            <div class="form-group">
+              <label for="message" data-i18n="contact_f_message">Tell us about your business</label>
+              <textarea id="message" name="message"
+                data-i18n-placeholder="contact_f_placeholder"
+                placeholder="What does your business do? What's eating up your team's time? Any specific problems you'd love to solve with AI?"
+                required></textarea>
             </div>
+
             <div class="form-group" style="font-size:0.82rem; color:var(--muted); line-height:1.55;">
               <label style="display:flex; gap:0.6rem; align-items:flex-start; font-weight:500; cursor:pointer;">
                 <input type="checkbox" name="consent" required style="width:auto; margin-top:4px;">
-                <span>I consent to Freera processing my details to respond to this enquiry, in accordance with the <a href="privacy.html" style="color:var(--purple-deep); text-decoration:underline;">privacy policy</a>.</span>
+                <span data-i18n="contact_f_consent">I consent to Freera processing my details to respond to this enquiry, in accordance with the <a href="privacy.html" style="color:var(--purple-deep); text-decoration:underline;">privacy policy</a>.</span>
               </label>
             </div>
-            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:1.1rem;">Send message <span class="btn-arrow">→</span></button>
-            <p style="font-size:0.82rem; color:var(--muted); margin-top:1.2rem; text-align:center;">We'll reply within one working day. Your info stays private.</p>
+
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:1.1rem;" data-i18n="contact_f_submit">Send message →</button>
+            <p style="font-size:0.82rem; color:var(--muted); margin-top:1.2rem; text-align:center;" data-i18n="contact_f_note">We'll reply within one working day. Your info stays private.</p>
           </form>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- Contact mini cards — no LinkedIn -->
+<!-- Contact mini cards -->
 <section>
   <div class="container">
     <div class="contact-cards">
       <div class="contact-mini">
         <div class="contact-mini-icon">✉️</div>
-        <h3>Email us</h3>
-        <p>For quick questions or anything that doesn't fit a form.</p>
+        <h3 data-i18n="contact_email_h">Email us</h3>
+        <p data-i18n="contact_email_p">For quick questions or anything that doesn't fit a form.</p>
         <a href="mailto:contact@freeraconsulting.com">contact@freeraconsulting.com →</a>
       </div>
       <div class="contact-mini">
         <div class="contact-mini-icon">📞</div>
-        <h3>Call or WhatsApp</h3>
-        <p>Mon–Fri, 9 am – 6 pm CET. Or drop us a WhatsApp any time.</p>
+        <h3 data-i18n="contact_phone_h">Call or WhatsApp</h3>
+        <p data-i18n="contact_phone_p">Mon–Fri, 9 am – 6 pm CET. Or drop us a WhatsApp any time.</p>
         <div style="display:flex; align-items:center; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
           <a href="tel:+4915224001111" style="color:var(--purple-deep); font-weight:600;">+49 1522 4001111</a>
           <a href="https://wa.me/4915224001111" target="_blank" rel="noopener" aria-label="WhatsApp" title="Message us on WhatsApp" style="display:inline-flex; align-items:center; background:#25D366; color:#fff; border-radius:999px; padding:0.35rem 0.8rem; font-size:0.85rem; font-weight:600; gap:0.4rem; text-decoration:none;">
@@ -139,9 +163,9 @@
       </div>
       <div class="contact-mini">
         <div class="contact-mini-icon">🌍</div>
-        <h3>Where we are</h3>
-        <p>Based in Germany, working remotely across every timezone.</p>
-        <span style="color:var(--ink); font-weight:600;">Mülheim an der Ruhr ✦ Global</span>
+        <h3 data-i18n="contact_location_h">Where we are</h3>
+        <p data-i18n="contact_location_p">Based in Germany, working remotely across every timezone.</p>
+        <span style="color:var(--ink); font-weight:600;" data-i18n="contact_location_v">Mülheim an der Ruhr ✦ Global</span>
       </div>
     </div>
   </div>
@@ -188,7 +212,8 @@
   </div>
 </footer>
 
-<script src="logo.js"></script><script src="lang.js"></script>
+<script src="logo.js"></script>
+<script src="lang.js"></script>
 <script>
 createFreeraLogo('navLogo',    { text:'Freera', fontSize:100, textX:320, textY:88, step:3, interactive:false, sparkles:false, trail:false });
 createFreeraLogo('footerLogo', { text:'Freera', fontSize:100, textX:320, textY:88, step:3, interactive:false, sparkles:false, trail:false });
