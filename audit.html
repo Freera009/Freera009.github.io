@@ -472,24 +472,22 @@ document.getElementById('generateBtn').addEventListener('click', async function(
 
   try {
     // ⚠️ Paste your NEW Groq API key here (get from console.groq.com)
-    var GROQ_KEY = 'YOUR_NEW_GROQ_KEY_HERE';
+    var WEBHOOK = 'https://hook.eu1.make.com/55i05efu5275am4zap18b953e52kwmdl';
 
-    var res  = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+    var res  = await fetch(WEBHOOK, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + GROQ_KEY
-      },
-      body: JSON.stringify({
-        model: 'llama-3.3-70b-versatile',
-        max_tokens: 1500,
-        messages: [{ role: 'user', content: prompt }]
-      })
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ prompt: prompt })
     });
-    var data = await res.json();
-    var html = '';
+    var raw  = await res.text();
+    var data, html = '';
+    try { data = JSON.parse(raw); } catch(e) { data = {}; }
     if (data.choices && data.choices[0]) {
       html = data.choices[0].message.content || '';
+    } else if (data.content && Array.isArray(data.content)) {
+      html = data.content.map(function(b){ return b.text||''; }).join('');
+    } else if (typeof raw === 'string' && raw.length > 10) {
+      html = raw;
     } else {
       throw new Error('No response from AI');
     }
