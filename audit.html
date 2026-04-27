@@ -450,25 +450,9 @@ document.getElementById('generateBtn').addEventListener('click', async function(
     })
   }).catch(function() {});
 
-  var prompt = 'You are an expert AI automation consultant at Freera, a premium AI consulting firm based in Germany.\n\n'
-    + 'A potential client has completed a free automation audit. Produce a detailed, personalised audit report.\n\n'
-    + 'CLIENT DETAILS:\n'
-    + '- Name: ' + name + '\n'
-    + '- Company: ' + (company || 'Not specified') + '\n'
-    + '- Industry: ' + industry + '\n'
-    + '- Team size: ' + teamSize + '\n'
-    + '- Monthly revenue: ' + revenue + '\n'
-    + '- Time-consuming tasks: ' + tasks.join(', ') + '\n'
-    + '- Biggest pain point: ' + (painPoint || 'Not specified') + '\n\n'
-    + 'Write a professional audit report in clean HTML using ONLY: <h2>, <h3>, <ul>, <li>, <strong>, <hr>. No divs, no classes.\n\n'
-    + 'Structure:\n'
-    + '1. <h2>Automation score: [X]/10</h2> — Address ' + name + ' by name. 2-sentence personalised summary.\n'
-    + '2. <h2>Top automation opportunities</h2> — 4-5 specific automations for their industry and tasks. Name each, explain what it achieves, state realistic saving (e.g. "saves ~5 hrs/week").\n'
-    + '3. <h2>Quick wins — start this week</h2> — 2-3 automations producing results in under 2 weeks.\n'
-    + '4. <h2>Estimated monthly impact</h2> — Hours saved, euro cost saving, revenue uplift. Realistic for their size.\n'
-    + '5. <h2>Your 90-day roadmap</h2> — Month 1, Months 2-3, Month 3+.\n'
-    + '6. <h2>Freera\'s recommendation</h2> — Short, direct, personal note to ' + name + '.\n\n'
-    + 'CRITICAL: Never reveal HOW to build automations, which tools to use, or technical details. Only WHAT each achieves. ~550 words. Be specific. Use real numbers.';
+  // Build a clean single-line prompt — no newlines to break JSON
+  var clientInfo = 'Name: ' + name + ' | Company: ' + (company || 'N/A') + ' | Industry: ' + industry + ' | Team: ' + teamSize + ' | Revenue: ' + revenue + ' | Tasks: ' + tasks.join(', ') + ' | Pain: ' + (painPoint || 'N/A');
+  var prompt = 'You are an AI automation consultant at Freera. A client completed a free audit. CLIENT: ' + clientInfo + ' TASK: Write a personalised automation audit report in HTML using only h2, h3, ul, li, strong, hr tags. Include: 1) Automation score X/10 addressing ' + name + ' by name 2) Top 4-5 automation opportunities with time savings 3) 2-3 quick wins for this week 4) Monthly impact in hours and euros 5) 90-day roadmap 6) Personal recommendation to ' + name + '. Never reveal tools or technical HOW. Only WHAT each automation achieves. Use real numbers. ~500 words.';
 
   try {
     // ⚠️ Paste your NEW Groq API key here (get from console.groq.com)
