@@ -471,17 +471,28 @@ document.getElementById('generateBtn').addEventListener('click', async function(
     + 'CRITICAL: Never reveal HOW to build automations, which tools to use, or technical details. Only WHAT each achieves. ~550 words. Be specific. Use real numbers.';
 
   try {
-    var res  = await fetch('https://api.anthropic.com/v1/messages', {
+    // ⚠️ Paste your NEW Groq API key here (get from console.groq.com)
+    var GROQ_KEY = 'YOUR_NEW_GROQ_KEY_HERE';
+
+    var res  = await fetch('https://api.groq.com/openai/v1/chat/completions', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + GROQ_KEY
+      },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 1000,
+        model: 'llama-3.3-70b-versatile',
+        max_tokens: 1500,
         messages: [{ role: 'user', content: prompt }]
       })
     });
     var data = await res.json();
-    var html = (data.content || []).map(function(b) { return b.text || ''; }).join('');
+    var html = '';
+    if (data.choices && data.choices[0]) {
+      html = data.choices[0].message.content || '';
+    } else {
+      throw new Error('No response from AI');
+    }
 
     clearInterval(timer);
     loadCard.style.display = 'none';
