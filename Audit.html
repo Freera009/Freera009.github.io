@@ -15,6 +15,13 @@
 /* ── Audit page ── */
 .audit-wrap { max-width: 720px; margin: 0 auto; padding: 0 1.5rem 5rem; }
 
+/* Audit nav link — protected from lang.js wipe */
+.audit-nav-link {
+  color: var(--purple-deep) !important;
+  font-weight: 700 !important;
+  white-space: nowrap;
+}
+
 .audit-badge {
   display: inline-flex; align-items: center; gap: 6px;
   background: rgba(124,58,237,0.08); border: 1px solid rgba(124,58,237,0.2);
@@ -284,8 +291,8 @@
       <li><a href="services.html" data-i18n="nav_services">Services</a></li>
       <li><a href="about.html" data-i18n="nav_about">About</a></li>
       <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
-      <li><a href="audit.html" style="color:var(--purple-deep);font-weight:700;">✦ Free Audit</a></li>
       <li><div class="lang-switcher"></div></li>
+      <li><a href="audit.html" class="audit-nav-link">✦ Free Audit</a></li>
       <li><a href="contact.html" class="btn btn-primary" data-i18n="nav_book">Book a call <span class="btn-arrow">→</span></a></li>
     </ul>
     <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
@@ -399,7 +406,7 @@
     </div>
 
     <p class="audit-err" id="err1">Please fill in your industry, team size, revenue and select at least one task.</p>
-    <button class="audit-btn-primary" onclick="goToStep2()">Continue → See my report</button>
+    <button class="audit-btn-primary" id="btnStep1">Continue → See my report</button>
   </div>
 
   <!-- STEP 2: Lead capture -->
@@ -433,8 +440,8 @@
     </div>
 
     <p class="audit-err" id="err2">Please enter your name and a valid email address.</p>
-    <button class="audit-btn-primary" id="generateBtn" onclick="runAudit()">✦ Generate my free audit report</button>
-    <button class="audit-btn-secondary" onclick="goBack()">← Back</button>
+    <button class="audit-btn-primary" id="generateBtn">✦ Generate my free audit report</button>
+    <button class="audit-btn-secondary" id="btnBack">← Back</button>
   </div>
 
   <!-- STEP 3: Loading -->
@@ -457,11 +464,11 @@
 
     <!-- Share / Download actions -->
     <div class="result-actions">
-      <button class="action-btn action-btn--share" onclick="copyReport()">
+      <button class="action-btn action-btn--share" id="btnShare">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
         Copy report link
       </button>
-      <button class="action-btn action-btn--download" onclick="downloadReport()">
+      <button class="action-btn action-btn--download" id="btnDownload">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Download as PDF
       </button>
@@ -473,7 +480,7 @@
       <a class="audit-cta-btn" href="https://cal.com/freera/discovery" target="_blank" rel="noopener">📅 Book my free strategy call →</a>
     </div>
 
-    <button class="audit-btn-secondary" onclick="restart()" style="margin-top:1rem;">← Run another audit</button>
+    <button class="audit-btn-secondary" id="btnRestart" style="margin-top:1rem;">← Run another audit</button>
   </div>
 
 </div><!-- /audit-wrap -->
@@ -571,6 +578,8 @@
 <script src="logo.js"></script>
 <script src="lang.js"></script>
 <script>
+document.addEventListener('DOMContentLoaded', function() {
+
 createFreeraLogo('navLogo',    { text:'Freera', fontSize:100, textX:320, textY:88, step:3, interactive:false, sparkles:false, trail:false });
 createFreeraLogo('footerLogo', { text:'Freera', fontSize:100, textX:320, textY:88, step:3, interactive:false, sparkles:false, trail:false });
 document.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('navLinks').classList.remove('open');});});
@@ -584,6 +593,16 @@ document.querySelectorAll('.audit-chk').forEach(function(lbl) {
     }, 0);
   });
 });
+
+// Wire all buttons by ID — no inline onclick
+document.getElementById('btnStep1').addEventListener('click', goToStep2);
+document.getElementById('generateBtn').addEventListener('click', runAudit);
+document.getElementById('btnBack').addEventListener('click', goBack);
+document.getElementById('btnShare').addEventListener('click', copyReport);
+document.getElementById('btnDownload').addEventListener('click', downloadReport);
+document.getElementById('btnRestart').addEventListener('click', restart);
+
+}); // end DOMContentLoaded
 
 // Step helpers
 function setStep(n) {
@@ -766,6 +785,8 @@ function restart() {
   setStep(1);
   window.scrollTo({top:0, behavior:'smooth'});
 }
+
+// end DOMContentLoaded wrapper — all functions defined above are accessible via the event listeners wired at the top
 </script>
 </body>
 </html>
